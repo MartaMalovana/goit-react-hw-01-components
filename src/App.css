@@ -1,12 +1,18 @@
+.Container {
+  display: flex;
+}
+
 .App {
   text-align: center;
   background-color: #e6e6fa;
   width: 428px;
-  height: 504px;
+  height: 600px;
   display: flex;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  border: 2px solid #646664;
+  border-radius: 5px;
 }
 
 .App-logo {
@@ -28,7 +34,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(129, 112, 112);
 }
 
 .App-link {
@@ -42,4 +48,25 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.app2 {
+  width: 350px;
+  height: 100%;
+  margin-left: 20px;
+  justify-content: center;
+}
+
+.app3 {
+  margin-left: 20px;
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.app4 {
+  margin-left: 20px;
+  background-color: white;
+  justify-content: center;
+  margin-left: 20px;
 }

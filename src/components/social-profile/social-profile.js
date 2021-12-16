@@ -1,32 +1,32 @@
 import PropTypes from "prop-types";
-import './social-profile.css';
+import s from './Social-profile.module.css';
 
-export default function SocialProfile ({avatar, username,tag, location, followers, views, likes}) {
+export default function SocialProfile ({avatar, username, tag, location, followers, views, likes}) {
     return (
-        <div className="Profile">
-            <div className="Description">
+        <div className={s.Profile}>
+            <div className={s.Description}>
                 <img
                     src={avatar}
                     alt="User avatar"
-                    className="Avatar"
+                    className={s.Avatar}
                 />
-                <p className="Name">{username}</p>
-                <p className="Tag">@{tag}</p>
-                <p className="Location">{location}</p>
+                <p className={s.Name}>{username}</p>
+                <p className={s.Tag}>@{tag}</p>
+                <p className={s.Location}>{location}</p>
             </div>
     
-            <ul className="Stats">
-                <li className="Stat">
-                    <span className="Label">Followers</span>
-                    <span className="Quantity">{followers}</span>
+            <ul className={s.Stats}>
+                <li className={s.Stat}>
+                    <span className={s.Label}>Followers</span>
+                    <span className={s.Quantity}>{followers}</span>
                 </li>
-                <li className="Stat">
-                    <span className="Label">Views</span>
-                    <span className="Quantity">{views}</span>
+                <li className={s.Stat}>
+                    <span className={s.Label}>Views</span>
+                    <span className={s.Quantity}>{views}</span>
                 </li>
-                <li className="Stat">
-                    <span className="Label">Likes</span>
-                    <span className="Quantity">{likes}</span>
+                <li className={s.Stat}>
+                    <span className={s.Label}>Likes</span>
+                    <span className={s.Quantity}>{likes}</span>
                 </li>
             </ul>
         </div>
@@ -34,11 +34,11 @@ export default function SocialProfile ({avatar, username,tag, location, follower
 }
 
 SocialProfile.propTypes = {
-    avatar: PropTypes.string,
-    username: PropTypes.string,
-    tag: PropTypes.string,
-    location: PropTypes.string,
-    followers: PropTypes.string,
-    views: PropTypes.string,
-    likes: PropTypes.string,
+    avatar: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired
 }
